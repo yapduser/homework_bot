@@ -1,0 +1,27 @@
+version: 1
+formatters:
+  simple:
+    format: '%(asctime)s - %(levelname)-8s - %(message)s - [* %(filename)s:%(lineno)d *]'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+  colored:
+    (): colorlog.ColoredFormatter
+    format: '%(log_color)s%(asctime)s - %(levelname)-8s - %(message)s - [* %(filename)s:%(lineno)d *]'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+handlers:
+  out:
+    class: logging.handlers.RotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: log/log_main.log
+    maxBytes: 50000000
+    backupCount: 5
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: colored
+    stream: ext://sys.stdout
+loggers:
+  root:
+    level: DEBUG
+    handlers: [ out, console ]
+disable_existing_loggers: False
