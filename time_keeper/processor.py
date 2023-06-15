@@ -14,7 +14,7 @@ def write_timestamp(timestamp=0):
     data = {'timestamp': timestamp}
     with open(PATH, 'w', encoding='utf-8') as file:
         json.dump(data, file)
-    logger.debug(msg.WRITE_OK.format(PATH))
+    logger.debug(msg.WRITE_OK)
 
 
 def read_timestamp():
