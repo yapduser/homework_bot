@@ -9,6 +9,5 @@ services:
     command: python3.9 homework.py
     restart: always
     volumes:
-      - ./log:/app/log
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
