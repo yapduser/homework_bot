@@ -127,6 +127,7 @@ def main():
     last_message = None
 
     while True:
+        logger.debug('****************************************')
         try:
             response = get_api_answer(timestamp)
             check_response(response)
