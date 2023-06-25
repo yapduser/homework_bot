@@ -46,7 +46,7 @@ python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Создать файл .env с переменными окружения, со следующим содержанием.
+Создать файл .env с переменными окружения, со следующим содержанием:
 ```
 BOT_TOKEN=<Токен бота>
 ACCOUNT_SID=<ID чата>
