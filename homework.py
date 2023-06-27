@@ -6,7 +6,6 @@ import time
 import requests
 import telegram
 from dotenv import load_dotenv
-from requests.status_codes import codes
 
 import config.log_msg as msg
 from config.logging_config import setup_logging
@@ -63,7 +62,7 @@ def get_api_answer(timestamp):
         error = re.sub(re.compile(r'at 0x[0-9a-fA-F]+'), '', str(error))
         raise Exception(error)
 
-    if response.status_code != codes.ok:
+    if response.status_code != requests.codes.ok:
         raise requests.HTTPError(
             msg.CODE_WRONG.format(response.status_code, response.text)
         )
