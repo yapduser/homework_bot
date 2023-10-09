@@ -1,0 +1,17 @@
+/tests
+
+.dockerignore
+Dockerfile
+docker-compose.yaml
+__pycache__/
+.venv
+.env
+.gitignore
+
+LICENSE
+main_log.log
+timestamp.json
+Procfile
+pytest.ini
+README.md
+setup.cfg
